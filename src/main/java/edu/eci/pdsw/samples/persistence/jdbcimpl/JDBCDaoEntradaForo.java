@@ -36,12 +36,12 @@ public class JDBCDaoEntradaForo implements DaoEntradaForo {
     
     
     @Override
-    public Usuario load(int id) throws PersistenceException {
+    public EntradaForo load(int id) throws PersistenceException {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public List<Usuario> loadAll() throws PersistenceException {
+    public List<EntradaForo> loadAll() throws PersistenceException {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 

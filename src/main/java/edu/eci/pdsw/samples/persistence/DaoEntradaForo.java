@@ -26,9 +26,9 @@ import java.util.List;
  */
 public interface DaoEntradaForo {
  
-    public Usuario load(int id) throws PersistenceException;
+    public EntradaForo load(int id) throws PersistenceException;
     
-    public List<Usuario> loadAll() throws PersistenceException;
+    public List<EntradaForo> loadAll() throws PersistenceException;
     
     public void save(EntradaForo e) throws PersistenceException;
     

@@ -20,6 +20,7 @@ import edu.eci.pdsw.samples.entities.EntradaForo;
 import edu.eci.pdsw.samples.entities.Usuario;
 import edu.eci.pdsw.samples.persistence.DaoEntradaForo;
 import edu.eci.pdsw.samples.persistence.PersistenceException;
+import edu.eci.pdsw.samples.persistence.mybatisimpl.mappers.EntradaForoMapper;
 import java.util.List;
 import org.apache.ibatis.session.SqlSession;
 
@@ -34,15 +35,14 @@ public class MyBatisDAOEntradaForo implements DaoEntradaForo{
     public MyBatisDAOEntradaForo(SqlSession session) {
         this.currentSession=session;
     }
-    
-    
+        
     @Override
-    public Usuario load(int id) throws PersistenceException {
+    public EntradaForo load(int id) throws PersistenceException {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public List<Usuario> loadAll() throws PersistenceException {
+    public List<EntradaForo> loadAll() throws PersistenceException {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
