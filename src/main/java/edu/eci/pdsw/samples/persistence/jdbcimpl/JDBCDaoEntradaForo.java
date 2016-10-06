@@ -16,6 +16,7 @@
  */
 package edu.eci.pdsw.samples.persistence.jdbcimpl;
 
+import edu.eci.pdsw.samples.entities.Comentario;
 import edu.eci.pdsw.samples.entities.EntradaForo;
 import edu.eci.pdsw.samples.entities.Usuario;
 import edu.eci.pdsw.samples.persistence.DaoEntradaForo;
@@ -52,6 +53,11 @@ public class JDBCDaoEntradaForo implements DaoEntradaForo {
 
     @Override
     public void update(EntradaForo e) throws PersistenceException {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void addToForo(int idForo, Comentario c) throws PersistenceException {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     

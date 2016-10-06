@@ -33,4 +33,5 @@ public interface EntradaForoMapper {
     
     public void agregarComentarioAEntradaForo(int idEntradaForo,Comentario c);
     
+    
 }

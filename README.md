@@ -126,3 +126,11 @@ Implemente la operación 'load' de MyBATISDaoUsuario. Recuerde que para esto deb
 
 1. Configurar el 'mapper' para el método _Usuario getUsuario(String email)_ definido en la interfaz UsuarioMapper.
 2. Hacer uso del mapper en el DAO correspondiente.    
+
+## Parte III
+
+Implemente las operaciones:
+
+* save de MyBATISDaoUsuario
+* load de MyBATISDaoEntradaForo
+* addToForo de MyBATISDaoEntradaForo

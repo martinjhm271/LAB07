@@ -16,6 +16,7 @@
  */
 package edu.eci.pdsw.samples.persistence;
 
+import edu.eci.pdsw.samples.entities.Comentario;
 import edu.eci.pdsw.samples.entities.EntradaForo;
 import edu.eci.pdsw.samples.entities.Usuario;
 import java.util.List;
@@ -34,5 +35,6 @@ public interface DaoEntradaForo {
     
     public void update(EntradaForo e) throws PersistenceException;
     
+    public void addToForo(int idForo,Comentario c) throws PersistenceException;
     
 }
