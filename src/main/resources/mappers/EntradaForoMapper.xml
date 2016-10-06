@@ -7,55 +7,5 @@
 	
     
     
-    
-        <resultMap type="EntradaForo" id="EntradaForoResult">
-            <id 	property="identificador" column="id"/>
-            <result property="comentario" column="contenido"/>            
-            <result property="fechayHora" column="fecha_hora"/>
-            <association property="autor" columnPrefix="ef_" resultMap="UsuarioResult"></association>
-            <collection property="respuestas" ofType="Comentario" columnPrefix="cmt_" resultMap="ComentarioResult"></collection>            
-        </resultMap>
-    
-        <resultMap type="Comentario" id="ComentarioResult">
-            <id property="contenido" column="contenido"></id>
-            <result property="fechayHora" column="fecha_hora"></result>
-            <association property="autor" columnPrefix="cm_" resultMap="UsuarioResult"></association>
-        </resultMap>
-        
-        <resultMap type="Usuario" id="UsuarioResult">
-            <id property="email" column="email"></id>
-            <result property="nombre" column="nombre"></result>
-        </resultMap>
-    
-    <select id="getEntradasForo" resultMap="EntradaForoResult">
-        select ef.id, ef.fecha_hora, ef.contenido, cm.id as cmt_id, cm.fecha_hora as cmt_fecha_hora, cm.contenido as cmt_contenido, autor.nombre as ef_nombre, autor.email as ef_email, autorcom.nombre as cmt_cm_nombre,  autorcom.email as cmt_cm_email
-        from ENTRADAS_FOROS as ef 
-        INNER JOIN COMENTARIOS as cm ON ef.`id` = cm.`ENTRADAS_FOROS_id` 
-        INNER JOIN USUARIOS as autor ON autor.email=ef.USUARIOS_email
-        INNER JOIN USUARIOS as autorcom ON autorcom.email=cm.USUARIOS_email
-    </select>
-
-	<!--<resultMap type="Student" id="StudentResult">
-		<id 	property="studId" column="stud_id"/>
-		<result property="name" column="name"/>
-		<result property="email" column="email"/>
-		<result property="dob" column="dob"/>
-	</resultMap>
-  
-  	<select id="findAllStudents" resultMap="StudentResult">
-    	select * from Students
-  	</select>
-  	
-  	<select id="findStudentById" parameterType="int" resultType="Student">
-    	select stud_id as studId, name, email, dob from Students where stud_id=#{studId}
-  	</select>
-  	
-  	<insert id="insertStudent" parameterType="Student">
-  		INSERT INTO STUDENTS(STUD_ID,NAME,EMAIL,DOB) VALUES(#{studId},#{name},#{email},#{dob})
-  	</insert>
-  	
-  	<update id="updateStudent" parameterType="Student">
-  		UPDATE STUDENTS SET NAME=#{name}, EMAIL=#{email}, DOB=#{dob} WHERE STUD_ID=#{studId}
-  	</update>-->
   	
 </mapper>

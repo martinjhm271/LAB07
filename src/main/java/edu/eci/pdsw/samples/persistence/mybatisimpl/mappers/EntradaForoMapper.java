@@ -16,6 +16,7 @@
  */
 package edu.eci.pdsw.samples.persistence.mybatisimpl.mappers;
 
+import edu.eci.pdsw.samples.entities.Comentario;
 import edu.eci.pdsw.samples.entities.EntradaForo;
 import java.util.List;
 
@@ -29,5 +30,7 @@ public interface EntradaForoMapper {
     public List<EntradaForo> getEntradasForo();
     
     public EntradaForo getEntradaForo(int id);
+    
+    public void agregarComentarioAEntradaForo(int idEntradaForo,Comentario c);
     
 }

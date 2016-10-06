@@ -24,6 +24,8 @@ import edu.eci.pdsw.samples.entities.Usuario;
  */
 public interface UsuarioMapper {
     
-    public Usuario getUsuario();
+    public Usuario getUsuario(String email);    
+    
+    public void insertarUsuario(String email,String nombre);
 
 }

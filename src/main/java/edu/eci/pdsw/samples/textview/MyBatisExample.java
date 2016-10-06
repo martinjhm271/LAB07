@@ -67,18 +67,7 @@ public class MyBatisExample {
 
         SqlSession sqlss = sessionfact.openSession();
 
-        EntradaForoMapper efm=sqlss.getMapper(EntradaForoMapper.class);
-        List<EntradaForo> ef=efm.getEntradasForo();
         
-        System.out.println(ef);
-        /*PedidoMapper pedmp=sqlss.getMapper(PedidoMapper.class);
-
-        ProductoMapper prodm=sqlss.getMapper(ProductoMapper.class);
-        
-        
-        System.out.println(prodm.selectProduct(1,10));
-        
-        prodm.insertProduct(new Producto(331312, "ABBCBD", 2312));*/
         
         sqlss.commit();
         
