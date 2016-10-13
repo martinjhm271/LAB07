@@ -29,19 +29,32 @@ public class Comentario {
     private String contenido;
     
     private Date fechayHora;
+    
+    private int id;
 
     public Comentario() {
     }
 
-    public Comentario(Usuario autor, String contenido, Date fechayHora) {
+    public Comentario(int id,Usuario autor, String contenido, Date fechayHora) {
         this.autor = autor;
         this.contenido = contenido;
         this.fechayHora = fechayHora;
+        this.id=id;
     }
 
     public Usuario getAutor() {
         return autor;
     }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+    
+    
 
     public String getContenido() {
         return contenido;

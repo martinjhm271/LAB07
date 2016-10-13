@@ -16,10 +16,13 @@
  */
 package edu.eci.pdsw.samples.textview;
 
+import edu.eci.pdsw.samples.entities.Comentario;
+import edu.eci.pdsw.samples.entities.Usuario;
 import edu.eci.pdsw.samples.persistence.DaoFactory;
 import edu.eci.pdsw.samples.persistence.PersistenceException;
 import java.io.IOException;
 import java.io.InputStream;
+import java.sql.Date;
 import java.util.Properties;
 
 /**
@@ -39,8 +42,8 @@ public class DAOUseExample {
         /**
          * OPERACIONES CON LOS DAO
          */
-        System.out.println(daof.getDaoEntradaForo().loadAll());
-        
+        daof.getDaoEntradaForo().addToForo(2,new Comentario(25,daof.getDaoUsuario().load("juan.perez@gmail.com"), "ultimo comentario agregado 17:04", java.sql.Date.valueOf("2016-12-12")));
+        System.out.println(daof.getDaoEntradaForo().load(2));
         
         daof.commitTransaction();
         daof.endSession();
